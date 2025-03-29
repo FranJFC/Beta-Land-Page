@@ -54,52 +54,11 @@ h2 {
     margin-top: 20px;
 }
 
-#Reviews {
+#Teclados, #Mouses, #Reviews {
     display: flex;
     /* border: 1px solid red; */
     justify-content: space-around;
     overflow-x: auto;
-}
-
-#Teclados, #Mouses {
-    display: flex;
-    gap: 20px;
-    overflow: hidden; /* Oculta las imágenes fuera del contenedor */
-    white-space: nowrap;
-    max-width: 100%;
-    position: relative;
-    align-items: center;
-}
-
-/* Animación para deslizar los productos */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-100%); }
-    50% { transform: translateX(-200%); }
-    75% { transform: translateX(-300%); }
-    100% { transform: translateX(0); }
-}
-
-/* Contenedor de productos dentro del carrusel */
-.teclados-container, .mouses-container {
-    display: flex;
-    animation: slide 20s infinite linear; /* Animación de 10s en bucle */
-}
-
-/* Cada producto */
-#Teclados div, #Mouses div {
-    flex: 0 0 100%;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-/* Imágenes */
-.teclados-img, .mouses-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
 }
 
 .wooting, .hyperx, .rk, .sorav2, .gprox, .g305, .gpro-tkl, .w80he, .viper-v3-pro, .finalmouse{
@@ -117,6 +76,11 @@ h2 {
     min-width: 500px;
     max-height: 250px;
     min-height: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.teclados-img:hover, .mouses-img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al 120% */
 }
 
 .products p {
