@@ -1,0 +1,230 @@
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: Verdana, sans-serif;
+}
+
+#header {
+    position: fixed;
+    display: flex;
+    background-color: rgb(63, 58, 58);
+    top: 0;
+    width: 100%;
+}
+
+#header-img {
+    width: 150px;
+    height: 75px;
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+    /*Margin left en auto para empujar a la derecha solo el nav sin afectar al logo*/
+    margin-left: auto;
+    margin-right: 20px;
+
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    display: inline;
+    margin: 30px;
+}
+
+/*Productos*/
+
+.products {
+    display: block;
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: 40px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#Reviews {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-around;
+    overflow-x: auto;
+}
+
+#Teclados, #Mouses {
+    display: flex;
+    gap: 20px;
+    overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+    white-space: nowrap;
+    max-width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+/* Animación para deslizar los productos */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+/* Contenedor de productos dentro del carrusel */
+.teclados-container, .mouses-container {
+    display: flex;
+    animation: slide 20s infinite linear; /* Animación de 10s en bucle */
+}
+
+/* Cada producto */
+#Teclados div, #Mouses div {
+    flex: 0 0 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Imágenes */
+.teclados-img, .mouses-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.wooting, .hyperx, .rk, .sorav2, .gprox, .g305, .gpro-tkl, .w80he, .viper-v3-pro, .finalmouse{
+    margin: 5px;
+    border: 2px solid rgb(60, 60, 151);
+    border-radius: 2%;
+}
+
+.w60he-review, .origins-core-review, .sorav2-review {
+    margin: 10px;
+}
+
+.teclados-img, .mouses-img {
+    max-width: 500px;
+    min-width: 500px;
+    max-height: 250px;
+    min-height: 250px;
+}
+
+.products p {
+    margin-left: 20px;
+}
+
+.footer {
+    background-color: rgb(63, 58, 58);
+    text-align: center;
+    font-size: small;
+    padding-top: 20px;
+}
+
+#email {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    width: 200px;
+    height: 26px;
+}
+
+#submit {
+    width: 100px;
+    height: 26px;
+    border-radius: 5%;
+    font-family: Verdana, sans-serif;
+    background-color: rgb(247, 225, 102);
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0; /* Para quitar el espacio extra */
+    margin: 0; /* Para quitar el margen extra */
+}
+
+a {
+    color: inherit; /* Hereda el color del texto de su contenedor */
+    text-decoration: none; /* Opcional: elimina el subrayado de los enlaces */
+}
+  
+a:visited {
+    color: inherit; /* Hereda el color del texto para los enlaces visitados */
+}
+  
+a:hover {
+    color: inherit; /* Hereda el color del texto cuando el enlace es hover */
+}
+  
+a:active {
+    color: inherit; /* Hereda el color del texto cuando el enlace es activado */
+}
+
+@media only screen and (max-width: 1030px) {
+    #header {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-bar {
+        display: flex;
+        flex-direction: column; /* Asegura que los elementos sean verticales */
+        align-items: center;
+        width: 100%;
+        border: none;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin: 15px;
+        border-bottom: 1px solid white;
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .products {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    #Teclados, #Mouses, #Reviews {
+        display: inline-block;
+        /* border: 1px solid red; */
+        overflow-y: auto;
+        text-align: center;
+        max-height: 600px;
+    }
+
+    .teclados-img, .mouses-img, #video {
+        max-width: 350px;
+        min-width: 350px;
+        max-height: 175px;
+        min-height: 175px;
+    }
+
+    #Reviews {
+        display: block;
+        overflow-y: auto;
+        text-align: center;
+    }
+
+
+}
+
